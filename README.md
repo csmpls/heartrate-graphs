@@ -1,10 +1,15 @@
-# empty-webapp
-novice developer builds stack
+# heartrate-graphs
 
+this is a simple setup for showing graphs of people's heartrates relative to their baseline heartrate
+
+## setup
 make sure you have `node`, `npm` and `grunt`
 
 then just
 ```npm install```
+
+and 
+```grunt``` or ```grunt watch``` while editing 
 
 ## directory structure
 
