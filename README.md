@@ -23,3 +23,8 @@ app/ <- this is the webapp
 
 `grunt` compiles `app/` to a neat bundle in `dist/` using coffeeify (browserify for coffeescript)
 
+
+## TODOS
+
+* label axes
+* remvoe tickmarks on the left side
