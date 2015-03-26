@@ -22,7 +22,7 @@ module.exports = (grunt) ->
 					'built-app/style.css': 'app/styles/main.scss'
 		watch:
 			coffeeify:
-				files: ['app/lib/*.coffee', 'app/main.coffee']
+				files: ['app/**/*.coffee', 'app/main.coffee']
 				tasks: ['coffeeify:compile']
 			jade:
 				files: ['app/index.jade']

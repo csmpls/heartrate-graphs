@@ -8,12 +8,14 @@ generate_normal_heartrate_graph = ->
 		# mean
 		rando_in_range(20,60)
 		# std
-		, rando_in_range(4,13))
+		, rando_in_range(4,13)
+		, "Your partner's heartrate was normal.")
 
 generate_elevated_heartrate_graph = ->
 	add_heartrate_graph(
 		rando_in_range(80,90)
-		, rando_in_range(6,16))
+		, rando_in_range(6,16)
+		, "Your partner's heartrate was elevated.")
 
 (()-> 
 	$('#generateNormalHeartrate').asEventStream('click')
