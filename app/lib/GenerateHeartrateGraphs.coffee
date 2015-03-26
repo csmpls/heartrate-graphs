@@ -1,4 +1,5 @@
 chart = require './Chart-ErrorBars.js'
+heartrate_graph_template = require '../templates/HeartrateGraphTemplate.coffee'
 
 randomScalingFactor = () ->
 	Math.round(Math.random()*100)
@@ -28,7 +29,13 @@ getGlobalChartOptions = () ->
 
 # our export is a function that takes a mean and standard deviation
 # and puts a bargraph in #heartrateGraph
-module.exports = (heartrate_mean, heartrate_std) -> 
+module.exports = (heartrate_mean, heartrate_std, message) -> 
+
+	# set up the graph container with a messgae
+	document.getElementById('graphContainer')
+		.innerHTML = heartrate_graph_template({'message':message})
+
+	## draw the graph
 	ctx = document.getElementById("heartrateGraph").getContext("2d");
 	window.myBar = new Chart(ctx).Bar(
 		getBarChartData(heartrate_mean, heartrate_std)
