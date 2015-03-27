@@ -1,11 +1,6 @@
 chart = require './Chart-ErrorBars.js'
 _ = require 'lodash'
 
-# TODO
-# this shouldnt do anything but add a chart with mean, std to a given DIV ID
-# template and so on should be the boss of this script
-
-
 getBarChartData = (mean, std) -> 
 	labels : [""]
 	, datasets : [

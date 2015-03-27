@@ -8,10 +8,10 @@ heartrate_graph_template = () ->
 		<div id = "graphContainer">
 			<canvas id="heartrateGraph" width="170px" height="270px"></canvas> 
 		</div>
-		<%= message %> ''')
+		<%= message %>
+		''')
 
-
-add_viz_to_DOM = (heartrate_mean, heartrate_std, message) ->
+add_viz_to_div = (heartrate_mean, heartrate_std, message, div_id) ->
 	# set up the graph container with a messgae
 	document.getElementById('visualization')
 		.innerHTML = heartrate_graph_template()({'message':message})
@@ -21,19 +21,19 @@ add_viz_to_DOM = (heartrate_mean, heartrate_std, message) ->
 		, heartrate_std
 		, "heartrateGraph") # div_id matches that of the template
 		
-
 module.exports = Generator =
-
-	normal_heartrate_viz: -> 
-		add_viz_to_DOM(
+	normal_heartrate_viz: (div_id) -> 
+		add_viz_to_div(
 			# mean
 			rando_in_range(40,60)
 			# std
 			, rando_in_range(4,13)
-			, "Your partner's heartrate stayed within normal ranges.")
+			, "Your partner's heartrate stayed within normal ranges."
+			, div_id)
 
-	elevated_heartrate_viz: ->
-		add_viz_to_DOM(
+	elevated_heartrate_viz: (div_id) ->
+		add_viz_to_div(
 			rando_in_range(65,85)
 			, rando_in_range(6,25)
-			, "Your partner's heartrate was elevated.")
+			, "Your partner's heartrate was elevated."
+			, div_id)
