@@ -12,8 +12,9 @@ module.exports = (grunt) ->
 		jade:
 			compile:
 				options:
-					data:
-						debug: false
+					pretty: true
+					# data:
+					# 	debug: false
 				files: 
 					'built-app/index.html':['app/index.jade']
 		sass:
