@@ -1,7 +1,129 @@
-#graphContainer{
-	width:180px;
-	height:270px;
-	background-image:url('../public/gradient.jpg');
-	background-size: 180px 250px;
-	background-repeat: no-repeat;
+
+/* application-specific styles */
+
+body {
+  font-size:14pt;
 }
+
+#container {
+  margin: 0px auto;
+  width: 950px;
+  padding: 20px;
+}
+
+
+/* 
+   player interface 
+*/
+
+#header {
+  width:100%;
+  background-color: #eee;
+  display: block;
+  float: left;
+}
+
+.headerDiv {
+  float: left;
+  display: block;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  width: 200px;
+}
+
+#pointsSidebar {
+  display: block;
+  float: left;
+  margin: 20px 20px 0 0;
+  background-color: #eee;
+  padding: 20px;
+}
+
+#content {
+  display: block;
+  float: left;
+}
+
+/* entrust turn view */
+
+#pointsToEntrustPanel {
+  font-size:20pt;
+}
+
+#entrustLess, #pointsToEntrustDiv {
+  display:block;
+  float:left;
+  margin-right:20px;
+}
+
+#entrustMore {
+  display:block;
+}
+
+
+/* summary view */
+
+.summary {
+  width:700px;
+}
+
+.badThing { 
+  color: red; 
+  font-weight: bold;
+}
+.goodThing { 
+  color: green; 
+  font-weight: bold;
+}
+.attention {
+  color: blue;
+  font-weight: bold;
+}
+
+#heartrateGraph{
+  width:180px;
+  height:270px;
+  background-image:url('gradient.jpg');
+  background-size: 180px 250px;
+  background-repeat: no-repeat;
+}
+
+
+
+/* 
+  admin interface 
+*/
+.isConnected {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  background-color: green;
+  color: green;
+  width: 30px;
+}
+
+.callMaker {
+  background-color:#eee;
+  color:#222;
+  padding: 10px;
+  margin:15px;
+}
+
+/* the div that appears when both people have made a move
+clicking it advances those players to the next turn */
+.bothDone {
+  background-color:blue;
+  cursor: pointer;
+  padding-left:20px;
+}
+
+.deleteGame{
+  background-color:red;
+  cursor: pointer;
+}
+
+.callMaker:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
